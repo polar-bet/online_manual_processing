@@ -1,0 +1,104 @@
+.main {
+
+		&__container {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+		}
+
+    &__title{
+      display: flex;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: 500;
+    }
+
+		&__form {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+		}
+
+    &__input-container{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      @media (max-width:1150px) {
+        gap: 30px;
+        .main__input-title{
+          width: 100%;
+        }
+      }
+    }
+
+		&__input-label {
+      min-width: 20%;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 24px;
+		}
+
+		&__input-title {
+      &:focus{
+      border: 2px solid #001AFF;
+      }
+      border: 2px solid black;
+      border-radius: 15px;
+      width: 80%;
+      padding: 0.5% 4% 0.5% 4%;
+      font-size: 28px;
+		}
+
+		&__textarea {
+		}
+    &__submit-row{
+      display: flex;
+      justify-content: right;
+    }
+		&__submit-button-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      min-width: 150px;
+      max-width: 150px;
+      min-height: 40px;
+      max-height: 40px;
+      border: 2px solid #001AFF;
+      &:hover{
+        .main__form-submit-button{
+          transition: 0.09s all 0.05s linear;
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 150px;
+          min-height: 40px;
+          background-color: white;
+          border: 2px solid #001AFF;
+          transform: translateX(-3px) translateY(-3px);
+        }
+      }
+		}
+
+    &__description-label{
+        font-size: 20px;
+    }
+    &__form-submit-button {
+
+        font-size: 16px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 150px;
+        min-height: 40px;
+        background-color: white;
+        border: 2px solid #001AFF;
+		}
+}

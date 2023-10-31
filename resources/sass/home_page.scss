@@ -1,0 +1,208 @@
+
+.main {
+    background: linear-gradient(180deg, #D0E3FF 0%, rgba(255, 255, 255, 0) 100%);
+    background-size: 100% 300px;
+    background-repeat: no-repeat;
+    padding-bottom: 2%;
+    padding-top: 2%;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+    }
+
+    &__welcome {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__welcome-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        max-width: 48%;
+    }
+
+    &__welcome-title {
+        font-weight: 700;
+        font-size: 54px;
+        @media (max-width: 600px){
+            font-size: 45px;
+        }
+    }
+
+    &__welcome-description {
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    &__welcome-documentation-button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        max-width: 150px;
+        min-height: 40px;
+        border: 2px solid #001AFF;
+
+        &:hover {
+            .main__welcome-documentation-link {
+                transition: 0.09s all 0.05s linear;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 150px;
+                min-height: 40px;
+                background-color: white;
+                border: 2px solid #001AFF;
+                transform: translateX(-3px) translateY(-3px);
+            }
+        }
+    }
+
+    &__welcome-documentation-link {
+        font-size: 16px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 150px;
+        min-height: 40px;
+        background-color: white;
+        border: 2px solid #001AFF;
+    }
+
+    &__welcome-placeholder {
+    }
+
+    &__welcome-placeholder-image {
+    }
+
+    &__examples {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+    &__example-title {
+        font-weight: 700;
+        font-size: 25px;
+    }
+
+    &__example-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: space-between;
+    }
+
+    &__example-list-item {
+        max-height: 450px;
+        transition: .3s all;
+
+        &:hover {
+            scale: 1.05;
+            transition: .3s all;
+        }
+    }
+
+    &__example-link {
+    }
+
+    &__example-card {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__example-preview {
+    }
+
+    &__example-image {
+        max-width: 380px;
+    }
+
+    &__example-card-content {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__example-card-title {
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    &__example-card-description {
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    &__example-button {
+        position: relative;
+        display: flex;
+        align-self: flex-end;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        max-width: 150px;
+        max-height: 40px;
+        border: 2px solid #001AFF;
+
+        &:hover {
+
+            .main__example-button-link {
+                transition: 0.09s all 0.05s linear;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 150px;
+                min-height: 40px;
+                background-color: white;
+                border: 2px solid #001AFF;
+                transform: translateX(-3px) translateY(-3px);
+            }
+        }
+    }
+
+    &__example-button-link {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 150px;
+        min-height: 40px;
+        border: 2px solid #001AFF;
+        background-color: white;
+    }
+}
+
+@media (max-width: 1190px) {
+
+    .main__example-list {
+        justify-content: center;
+    }
+    .main__example-image {
+        width: 90vw;
+    }
+
+
+}
+
+@media (max-width: 840px) {
+
+    .main__welcome-placeholder {
+        display: none;
+    }
+    .main__welcome-content {
+        max-width: none;
+
+    }
+
+}

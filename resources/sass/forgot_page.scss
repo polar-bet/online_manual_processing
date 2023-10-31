@@ -1,0 +1,14 @@
+.card-body{
+    @media(max-width: 500px){
+        flex-direction: column !important;
+        #mail-holder{
+            width: 100%;
+        }
+        #placeholder{
+            width: 100% !important;
+            div{
+                width: 100% !important;
+            }
+        }
+    }
+}
